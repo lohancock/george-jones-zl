@@ -1,0 +1,42 @@
+The only universally available planetarium software I know of that enables the user to add Earth rings is Celestia. Celestia is a free, open source application.  Its originator is Chris Laurel, http://www.fifthstarlabs.com/chris. Its special thing is being able to handle points of view and frames of reference very quickly and well.  
+https://sourceforge.net/projects/celestia/
+Then go to ftp://ssd.jpl.nasa.gov/pub/eph/planets/SunOS/de406/ and download the file unxp1800.406
+Rename that jpleph.dat and drop it into the celestia/data folder that was made when you installed Celestia in Step 1.  (If you want to understand what the jpleph.dat file is doing, read http://en.wikibooks.org/wiki/Celestia/JPL_Ephemerides)
+Make a new folder in the celestia/extras directory.  You can call it anything.  Let us say you call it georgejones.
+Copy the file tworings.ssc that is stored in this repository, into the folder georgejones.   
+Within the georgejones folder, make a folder within, named textures.  Within that, make a folder called medres and drop into it the two graphics files, eqring.png and moonring.png, found in this repository.  
+Remark:  these set the density structures of the rings from the center of the body that a ring orbits (the left side of the *.png graphic), to a radial distance of 512K km (the right side of the graphic).  These two example ring density structures are inventions.  For convenience, note that if you set your *.png files to have width 512 or a multiple of that, and set the ring radius as 0 to 512000 then each pixel will represent 1000 km of radial distance.  That's the way Celestia handles these files.  The height of the file does not matter – Celestia will look at only one row anyway.
+
+eqring.png
+ 
+	moonring.png
+ 
+
+Start up Celestia, and the earth will have a ring around its equator, and a ring orbiting the earth-moon barycenter.  If the ring is solid, then it may be an issue of your graphics card, or of the graphics Celestia is using.  Try Ctrl-V a few times to invoke more-sophisticated graphics.  Otherwise, note that NVidia cards work particularly well with Celestia and not all others work equally well.
+A word on the two-ring system you see.  John O'Keefe proposed in 1980 a ring in the plane of Earth's equator.  Such a ring, as you see, has been added.  But besides that, there is a second ring around Earth.  This is the ring George Jones proposed, "near" the ecliptic.  As you may know if you have even got to this site, George Jones was the first person ever to propose an Earth ring.  In 1856, he proposed an Earth ring "near" the plane of the ecliptic to explain variations he saw in the zodiacal light.  But his proposal was out of step with the times.  Saturn's rings known at the time were all in the equatorial plane.  Maxwell explained why that orientation was favored, in 1859.  All additional planetary rings were also in the respective equatorial planes...   until 2009.  Probably this is why nobody paid attention to George Jones's proposal in the 1850s, and probably this is also the reason Celestia didn't build in the ability to pick ring orientation.  But in 2009, Saturn's Phoebe ring was discovered.  That ring is in the plane of Saturn's moon Phoebe, and NOT in the plane of Saturn's equator.  And this one is like George Jones's proposed ring, because our Moon's orbit is only five degrees away from the ecliptic - so Jones's idea of a ring "near" the ecliptic can be read as Earth with something like a Phoebe ring.  
+OK, so here Earth has that second ring.   It is in the plane of the lunar orbit.  Did that by inventing an imaginary planet with the same orbit as Earth, tilting it so that its axis is perpendicular to the plane of the Moon's orbit, and then giving it an equatorial ring. 
+You may notice the second ring is not as well treated as the first!  The equatorial ring has shadows, while the Jones ring does not.  If you want to see where the shadows of the Jones ring falls, you need to improvise, because Celestia will not draw shadows for both set of rings.  
+The Celestia wiki describes how to navigate around this view.  The wiki assumes you are using a 101-key keyboard.  There are workarounds if you have a laptop but I haven't worked them out.  I just bought a 101-key keyboard.
+What follows is first a set of remarks about how to represent the shadows of the ring system on Earth, and then a set of remarks about how to set up preparation of a video of the sky as Jones saw it. These are independent.  If I had more time they would be separate files linked to this one.  Ah well.
+
+THE SHADOWS OF THE RING SYSTEM
+If you want to see the shadows of both rings, you can go to the point of view of the sun, look at the ringed Earth, and magnify your view.  Where the image of the ring blocks the sun’s view of earth, there is a shadow on earth. Here is a cookbook approach to doing that.  
+Start Celestia
+press <enter>
+type sun 
+press <enter> 
+type g 
+press <enter>
+type earth
+ press <enter> 
+press g
+
+Wait till stuff stops happening.  Check phase angle (shown in top left text).  If it is not 0.0, do all those steps again (from the first “press <enter>”).  
+Once you have iterated that enough times to ensure that the phase angle is zero, then use the "End" key – which is “1” on the numeric keypad of the 101-key USB keyboard provided Numlock is Off – if it is on, then the number 1 just takes you to Mercury. Press "End" again and again until "distance" (shown in top left text) increases, becoming thousands of km, then millions of km, then being measured in au instead of km, until the distance is something between 0.9 and 1.0 au, and not more than 1.0 au.  if you go too far, press "Home" (which is 7 on the keypad provided Numlock is off) to reverse.  
+Once positioned, press shift-colon (to lock the phase angle).  
+Press comma, again and again (about a hundred times or so), to "magnify" the field of view.  Note that magnification is not the same thing as "getting closer to earth."  You will see the image of earth grow bigger and bigger, till it fills your screen.  to back up, press period.  Once you have the magnification the way you like it, press shift-colon again.  Note:  this scheme only works if you maintain the phase angle at zero all the time!    
+And there you have it.  Now you have a view of the earth where the position of the ring images is the same as the shadow they would cause - because you are positioned AT the sun itself, though your view of earth is magnified.  
+You can speed up the passage of time by pressing L a few times; you can slow it by pressing K a few times; to reverse time, press J; to reverse it back again, press J again.  To look at some particular date, click the Time menu, and Set Time.  Celestia documentation can be found on the Web and it will show how to do other things – for example, work out what view the satellites and spacecraft would have of the rings.  Thank you Chris Laurel and colleagues!
+
+THE SKY AS JONES SAW IT
+
