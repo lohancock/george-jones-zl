@@ -27,11 +27,15 @@ Assure that you have this location centered on Earth.  turn on horizontal coordi
 y
 that will land your point of view on the dead center of the Earth as you had depicted it, and you will be facing west because you had 270 at the top, and you will be traveling with earth because you pressed "y"
 press the down and up arrows to move the horizon.  
-It would be nice to produce a point of view just like the drawings supplied by George Jones.
-a. Reduce the visible stars by pressing [ or increase the number with ].  
-b. In the "Render" menu be sure the planets are visible and that both planets and stars are named.  On April 3, 1853, Saturn was in the western sky, as Jones's drawing shows.  
-c. Also in the render menu, turn on the ecliptic line.  this is the vertical line shown in all Jones's drawings.  Use the 4 and 6 keys on the numeric keypad (with Numlock off) to make this line vertical in your view.  
-d. Setting star images to disks seems to help.
+
+JONES CHARTS
+On page xli, Jones sets out the conventions used on his charts.  Here are suggestions for making the Celestia view comparable.
+a. Reduce the visible stars by pressing [ or increase the number with ].  Jones' charts do not go to dimmer stars.
+b. In the Render menu, choose Star Style to be scaled disks.
+c. In the "Render" menu, under View Options, be sure the planets are visible and that both planets and stars are named. 
+d. Also under Render | View Options, turn on the ecliptic line.  This is the vertical axis down the middle of each Jones chart.
+turn on the ecliptic line.  
+e. The ecliptic is a vertical line down teh center of each of Jones's charts.  To make it vertical in the Celestia view, use the 4 and 6 keys on the numeric keypad (with Numlock off). 
 
 REMARKS ABOUT NAVIGATION
 To see the lat/lon of your observer, go to Navigation | Goto Object.  If latitude and longitude are blank, then re-set focus on Earth:  <enter> Earth <enter>.  Then once again Navigation | Goto Object
