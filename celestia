@@ -30,9 +30,23 @@ press the down and up arrows to move the horizon.
 It would be nice to produce a point of view just like the drawings supplied by George Jones.
 a. Reduce the visible stars by pressing [ or increase the number with ].  
 b. In the "Render" menu be sure the planets are visible and that both planets and stars are named.  On April 3, 1853, Saturn was in the western sky, as Jones's drawing shows.  
-Also in the render menu, turn on the ecliptic line.  this is the vertical line shown in all Jones's drawings.  Use the 4 and 6 keys on the numeric keypad (with Numlock off) to make this line vertical in your view.  
-Setting star images to disks seems to help.
-Do not use the left and right cursor keys because these change your lat/lon.  But it is OK to use the up and down keys; these in effect have you turning somersaults in place.  7 moves you up; 1 moves you down; and the period and comma make your field of view bigger or smaller.
+c. Also in the render menu, turn on the ecliptic line.  this is the vertical line shown in all Jones's drawings.  Use the 4 and 6 keys on the numeric keypad (with Numlock off) to make this line vertical in your view.  
+d. Setting star images to disks seems to help.
+
+REMARKS ABOUT NAVIGATION
+To see the lat/lon of your observer, go to Navigation | Goto Object.  If latitude and longitude are blank, then re-set focus on Earth:  <enter> Earth <enter>.  Then once again Navigation | Goto Object
+The period symbol increases the field of view while comma reduces it.  Note that this can appear confusingly similar to actually moving the observer.
+The cursor up and down arrows amount to somersaulting in place, forward or backward.
+The cursor left and right arrows amount to cartwheeling in place, left or right. 
+Alternatively, with Numlock off, the numbers 4 and 6 also amount to cartwheeling left or right.
+With Numlock Off, the number 7 goes down (toward center of Earth) while 1 goes "up" and note that when you can't figure out where you are, 1 is a good approach.
+With Numlock Off, the numbers 2 and 8 scroll up and down through the observer's field of view.  This can appear as though the observer were moving but not so.
+Shift followed by any one of the four cursor arrows moves the observer on Earth.
+
+L means speed up time; K mean slow it; spacebar means stop it.  J means reverse it.
+Ctrl-V cycles through levels of graphic sophistication.   
+With Numlock off, 3 is an Undo key but I don't know what its limitations are.
+With Numlock on, the keypad has an entirely different meaning naturally.  Check the Wiki.
 
 Now speed up the passage of time by pressing L; slow it by pressing K; reverse it with J; reverse again with J.
 The sun will appear, and will set, and the sky will darken and the stars appear.  Aligned with the eclitptic is some kind of a band of something.  That is the sky position of teh ring in the plane of the lunar orbit.  (To your left is another arc that does not move at all.  that is the position of an equatorial ring.  It is nowhere near the ecliptic line and can't account for all the action there that Jones saw.) 
