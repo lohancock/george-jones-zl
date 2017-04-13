@@ -1,21 +1,33 @@
-This file describes how to use Celestia planetarium software to visualize the night sky, and how to add Earth rings to the visualization.
+This file describes a way to correctly visualize the night sky if Earth has rings.
+
 The only universally available planetarium software I know of that enables the user to add Earth rings is the program named Celestia. Celestia is a free, open source application.  Its originator is Chris Laurel, who has been aided over the years by a large number of other astronomy-interested graphics programmers.  Among all planetarium software, Celestia's special thing is being able to handle points of view and frames of reference very well.  Here is where you can download it:  
-https://sourceforge.net/projects/celestia/
-Then install it.  There were directions at sourceforge.
-To use it for precision stuff in the solar system, you should replace its ephemerides with those from JPL.  To do that:
+Install it from https://sourceforge.net/projects/celestia/
+
+You should replace its reasonably good ephemerides with the exactly right ones from JPL.  To do that:
 Go to ftp://ssd.jpl.nasa.gov/pub/eph/planets/SunOS/de406/ and download the file unxp1800.406
 Rename that file jpleph.dat and drop it into the celestia/data folder that was made when you installed Celestia in Steps 2-4.  (If you want to understand what the jpleph.dat file is doing, read http://en.wikibooks.org/wiki/Celestia/JPL_Ephemerides)
-There are many ways to add rings depending on what kind of system you want.  Here follow instructions for adding two rings.  One is in the plane of the equator like most planetary rings, and is thus an embodiment of the suggestion of O'Keefe.  Two is a ring in the plane of the lunar orbit which is near the ecliptic and is thus one interpretation of the suggestion of Jones.  The following directions will put both rings around Earth.  The density structure is arbitrary.  So to get all this, download the zipfile tworings.zip that is in this directory.  Unzip it and drop it into celestia/extras.
-Remark:  the density structures of the two rings are set by the *.png files that are called in the *.ssc file at the uppermost level in that directory.  The *.png files are in the medres folder.   You can read up on this at the Celestia wiki.  
-The most convenient and general way to use these *.png files is to set the ring radius in the *.ssc file as occupying the whole range zero to 512000.  If you then use *.png files with width 512 then each pixel will represent 1000 km of radial distance.  That's the way Celestia handles these files.  The height of the file does not matter – Celestia will look at only one row anyway.  The reason I have not set up the *.ssc this way is that some graphics cards do not handle that correctly.  Nvidia cards handle it correctly and for all I know some others.  I have constrained the rings to a smaller range so that you will not be discouraged by having it all appear wrong.   
 
-Now start up Celestia, and the earth will have a ring around its equator, and a ring orbiting the earth-moon barycenter.  If the ring is solid, then it may be an issue of your graphics card, or of the graphics Celestia is using.  Try Ctrl-V a few times to invoke more-sophisticated graphics.  Otherwise, note that NVidia cards work particularly well with Celestia and not all others work equally well.
+Next, here follow instructions for adding two rings to Celestia's visualization.  
+One ring is in the plane of the equator like most planetary rings, and is thus an embodiment of the suggestion of O'Keefe (1980).
+The other one is a ring in the plane of the lunar orbit which is near the ecliptic and is thus one interpretation of the suggestion of Jones (1856).  
+Download the zipfile tworings.zip that is in this directory.  Unzip it and drop it into celestia/extras.  Also download shipsites.ssc and drop it in at the top level of the tworings directory.  You ask why I didn't do this already.  Well, eventually I will.
+When you start up Celestia, the earth will have a ring around its equator, and a ring orbiting the earth-moon barycenter.  
+Remarks:  
+The density structures of the two rings are arbitrary inventions.
+The density structures are been set by the *.png files that are called in the *.ssc file at the uppermost level in that directory.  
+The *.png files required are in the medres folder.   You can read up on this at the Celestia wiki.  
+The most convenient and general way to use these *.png files would be to set the ring radius in the *.ssc file as occupying the whole range zero to 512000 and then use .png files with width 512 pixels or a multiple.  In this case each pixel will represent 1000 km of radial distance (or a half or quarter of 1000 km depending on the multiple of 512 that you used).  Now you see how Celestia handles these files.  The height of the file does not matter – Celestia will look at only one row anyway. 
+But it is not done that way here. The reason I have not set up the *.ssc this way is that some graphics cards do not handle that correctly.  So I have constrained the rings to a smaller range so that you will not be discouraged by having it all appear wrong when you fire it up.   
+If the ring is solid, then it may be an issue of your graphics card, or of the graphics Celestia is using.  Try Ctrl-V a few times to invoke more-sophisticated graphics.  Otherwise, note that NVidia cards work particularly well with Celestia and not all others work equally well.
 
-A word on the two-ring system you see.  One is equatorial, which is a plain vanilla planetary ring, nothing special except that nobody has yet realized we have one and it affects climate.  It is the other one, the one NOT around the ecliptic, which was the first proposed ring.  This is the one that George Jones proposed as a better account for the zodiacal light than the dust rings suggested by Cassini and Laplace.  In 1856, George Jones proposed an Earth ring "near" the plane of the ecliptic to explain variations he saw in the zodiacal light, in his nightly observations as a member of the Perry expedition to Japan in the 1850s.  His proposal was out of step with the times, however, and was not at all accepted.  Saturn's rings known at the time were all in the equatorial plane.  Furthermore, James Cleark Maxwell explained in 1859 why the equatorial orientation would be favored.  And for the next hundred and fifty years, all additional planetary rings discovered were also found in the respective equatorial planes of Saturn, Jupiter, Uranus and Neptune...   until 2009, when * discovered Saturn's Phoebe ring, which is in the plane of Saturn's moon Phoebe and is not in Saturn's equatorial plane.  This long history is probably the reason Celestia didn't build in the ability to pick ring orientation.  But Saturn's Phoebe ring opens up new thoughts.  If Earth had a ring in the plane of our Moon, then as it happens that would be a ring very near the ecliptic, because our Moon rotates Earth in an orbit about five degrees from the ecliptic plane.  And that means that George Jones's idea now has a solar system analogue and doesn't sound insane any more.   Now we can say that perhaps he was suggesting we have a "Phoebe" ring in the plane of our Moon.  that would be near the ecliptic.  
-The question is, does such a ring actually account for his observations?  there are a lot of ways for an orbit to be "near" the ecliptic - does this "Phoebe ring" explanation really account for the anomalies Goerge Jones saw, which drove him to reject Cassini's explanation.
-Alors, you are now prepared to consider that question.  Celestia is now set up with a ring in the plane of the lunar orbit (you can look at the SSC file to see how I did that - added an imaginary planet with the same orbit as Earth, tilting it so that its axis is perpendicular to the plane of the Moon's orbit, and then giving it an equatorial ring. ).  Now you simply visualize the night sky at the times and locations of his observations, and compare what you see, to what he wrote.
-The Celestia wiki describes how to navigate around this view.  The wiki assumes you are using a 101-key keyboard.  There are workarounds if you have a laptop but I haven't worked them out.  I just bought a 101-key keyboard and use the wiki instructions.
-The night of April 2, 1853
+A word on the second ring in the system you see.  One ring is equatorial, the usual planetary ring orientation.  That is not our focus here.  The focus of this site is to explore the sky position of the other ring.  In 1856, George Jones proposed an Earth ring "near" the plane of the ecliptic to explain variations he saw in the zodiacal light, in his nightly observations as a member of the Perry expedition to Japan in the 1850s.  He said this explanation provided a better account for the zodiacal light than the circumsolar dust rings suggested by Cassini and Laplace.  His proposal was out of step with the times, however, and was not at all accepted.  Not only was he disputing with Cassini and Lapalace, but also, Saturn's rings known at the time were all in the equatorial plane.  Even more discouraging, James Clerk Maxwell explained in 1859 why the equatorial orientation would be favored.  And for the next hundred and fifty years, all additional planetary rings discovered were also found in the respective equatorial planes of Saturn, Jupiter, Uranus and Neptune...   Nobody paid attention to Jones's idea.  And by the way, this long history is probably the reason Celestia didn't build in the ability to pick ring orientation.  But in 2009, ***** discovered Saturn's Phoebe ring, which is in the plane of Saturn's moon Phoebe and is not in Saturn's equatorial plane.  Saturn's Phoebe ring opens up new thoughts.  For.... If Earth had a ring in the plane of our Moon, then as it happens that would be a ring very near the ecliptic, because our Moon rotates Earth in an orbit about five degrees from the ecliptic plane.  And that means that George Jones's idea now has a solar system analogue and shouldn't sound insane any more.   
+Now we can say that perhaps he was suggesting we have a "Phoebe" ring in the plane of our Moon.  that would be near the ecliptic.  it all fits!  so you see the purpose of this visualization, which is to see whether Jones's idea really truly works out or not.  He described a lot of odd things.  If you put a Phoebe ring around Earth, do you see those same things on those nights in those places?   There are a lot of ways for an orbit to be "near" the ecliptic - does this "Phoebe ring" orientation account for Jones's observations?
+The program now is to visualize the night sky at the times and locations of his observations, and compare what you see, to what he wrote.
+A FEW REMARKS ABOUT CELESTIA
+remark 1:  Celestia is now set up with a ring in the plane of the lunar orbit.  You can look at the SSC file to see how I did that - added an imaginary planet with the same orbit as Earth, tilting it so that its axis is perpendicular to the plane of the Moon's orbit, and then gave the imaginary planet its own equatorial ring. 
+remark 2:  Celesta works optimally with NVidia cards.  I don't know whether any others are equally compatible.  
+remark 3:  The Celestia wiki describes how to navigate around this view.  The wiki assumes you are using a 101-key keyboard.  There are workarounds if you have a laptop but I haven't worked them out.  I just bought a 101-key keyboard and use the wiki instructions.
+remark 4:  A worked example.  The night of April 2, 1853
 Observation number 1 is in the hours after sunset on April 2, 1853.  The ship was at 10.53N, 110.15E.
 Open up Celestia 
 <enter> Earth <enter> g
@@ -28,11 +40,9 @@ y
 that will land your point of view on the dead center of the Earth as you had depicted it, and you will be facing west because you had 270 at the top, and you will be traveling with earth because you pressed "y"
 press the down and up arrows to move the horizon.  
 
-While this is a very clear and transparent way to situate yourself, there is a helper file here.  
-If you add the file entitled shipsites.ssc to the celestia/extras/tworings folder, then you will make the positions of all of Jones's observations available to yourself for selection.
-In terms of Celestia, this file provides their latitudes and longitudes, categorizes them all as observatories, and gives them size 300.
+remark 5:  While starting from scratch is a very clear and transparent way to situate yourself, there is a complicated alternative.  If you add the file entitled shipsites.ssc to the celestia/extras/tworings folder, then you will make the positions of all of Jones's observations available to yourself for selection.  In terms of Celestia, this file provides their latitudes and longitudes, categorizes them all as observatories, and gives them size 300.
 
-JONES CHARTS
+remark 6:  imitating Jones's chart style
 On page xli, Jones sets out the conventions used on his charts.  Here are suggestions for making the Celestia view comparable.
 a. Reduce the visible stars by pressing [ or increase the number with ].  Jones' charts do not go to dimmer stars.
 b. In the Render menu, choose Star Style to be scaled disks.
@@ -41,7 +51,7 @@ d. Also under Render | View Options, turn on the ecliptic line.  This is the ver
 turn on the ecliptic line.  
 e. The ecliptic is a vertical line down teh center of each of Jones's charts.  To make it vertical in the Celestia view, use the 4 and 6 keys on the numeric keypad (with Numlock off). 
 
-REMARKS ABOUT NAVIGATION
+remark 7:  about navigation for your Earth observer
 To see the lat/lon of your observer, go to Navigation | Goto Object.  If latitude and longitude are blank, then re-set focus on Earth:  <enter> Earth <enter>.  Then once again Navigation | Goto Object
 The period symbol increases the field of view while comma reduces it.  Note that this can appear confusingly similar to actually moving the observer.
 The cursor up and down arrows amount to somersaulting in place, forward or backward.
@@ -57,10 +67,14 @@ With Numlock off, 3 is an Undo key but I don't know what its limitations are.
 With Numlock on, the keypad has an entirely different meaning naturally.  Check the Wiki.
 
 Now speed up the passage of time by pressing L; slow it by pressing K; reverse it with J; reverse again with J.
-The sun will appear, and will set, and the sky will darken and the stars appear.  Aligned with the eclitptic is some kind of a band of something.  That is the sky position of teh ring in the plane of the lunar orbit.  (To your left is another arc that does not move at all.  that is the position of an equatorial ring.  It is nowhere near the ecliptic line and can't account for all the action there that Jones saw.) 
-Look at the sky position of the ring that "moves" during the hours just after sunset, and ask yourself whether the illumination George Jones dewscribes corresponds to that object.  Of course, as the ZL is illuminated by forward scattering, only the lower part is illuminated, as that is nearest the sun that has set and is below the horizon.
-You can capture this visualizaqtion for easier consideration eitehr by suing Celestia's ability to store videos of itself, or by a simple screencast.
-And there you have it.  You are now able to run through George Jones's observations one by one, and see what the sky position of a ring would have been, so to decide whether you agree with him that a ring accounts for the anomalies.
+The sun will appear, and will set, and the sky will darken and the stars appear.  Aligned with the eclitptic is some kind of a band of something.  That is the sky position of teh ring in the plane of the lunar orbit.  (To your left is another arc that does not move at all.  that is the position of an equatorial ring.  It is nowhere near the ecliptic line and can't account for all the action there that Jones saw.)  The ring that moves, is the not-equatorial ring, the "Phoebe" ring, Jones's suggestion.
+
+remark 8:  Celestia does not include the optical effect of ring dust on light from teh sun behind it, such as forward scattering, although it does include forward scattering through the atmosphere.  So you can see the sky position of the ring but you cannot see here that its brightness would fade for positions less aligned directly at the sun itself.  If the ZL is illuminated by forward scattering, only the lower part is illuminated, as that is nearest the sun that has set and is still below the horizon.  If it is illuminated by reflection, that would be entirely different.  Unfortunately we can't visualize these two situations in Celestia.
+remark 9:  You can capture this visualization to save time for later considerations, either by suing Celestia's ability to store videos of itself, or by a simple screencast.
+
+AND IN CLOSING
+There you have it.  You are now able to run through George Jones's observations one by one, and see what the sky position of a ring would have been, so to decide whether you agree with him that a ring accounts for the anomalies.
+
 
 OTHER CELESTIA STUNTS
 
