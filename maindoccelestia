@@ -28,6 +28,10 @@ y
 that will land your point of view on the dead center of the Earth as you had depicted it, and you will be facing west because you had 270 at the top, and you will be traveling with earth because you pressed "y"
 press the down and up arrows to move the horizon.  
 
+While this is a very clear and transparent way to situate yourself, there is a helper file here.  
+If you add the file entitled shipsites.ssc to the celestia/extras/tworings folder, then you will make the positions of all of Jones's observations available to yourself for selection.
+In terms of Celestia, this file provides their latitudes and longitudes, categorizes them all as observatories, and gives them size 300.
+
 JONES CHARTS
 On page xli, Jones sets out the conventions used on his charts.  Here are suggestions for making the Celestia view comparable.
 a. Reduce the visible stars by pressing [ or increase the number with ].  Jones' charts do not go to dimmer stars.
@@ -59,10 +63,11 @@ You can capture this visualizaqtion for easier consideration eitehr by suing Cel
 And there you have it.  You are now able to run through George Jones's observations one by one, and see what the sky position of a ring would have been, so to decide whether you agree with him that a ring accounts for the anomalies.
 
 OTHER CELESTIA STUNTS
-You may notice the second ring is not as well treated as the first!  The equatorial ring has shadows, while the Jones ring does not.  If you want to see where the shadows of the Jones ring falls, you need to improvise, because Celestia will not draw shadows for both set of rings.  
-hat follows is first a set of remarks about how to represent the shadows of the ring system on Earth, and then a set of remarks about how to set up preparation of a video of the sky as Jones saw it. These are independent.  If I had more time they would be separate files linked to this one.  Ah well.
 
-THE SHADOWS OF THE RING SYSTEM
+WHERE DOES THE SHADOW OF JONES'S RING FALL?
+You may notice the second ring is not as well treated as the first!  The equatorial ring has shadows, while the Jones ring does not.  If you want to see where the shadows of the Jones ring falls, you need to improvise, because Celestia will not draw shadows for both set of rings.  
+What follows is first a set of remarks about how to represent the shadows of the ring system on Earth, and then a set of remarks about how to set up preparation of a video of the sky as Jones saw it. These are independent.  If I had more time they would be separate files linked to this one.  Ah well.
+
 If you want to see the shadows of both rings, you can go to the point of view of the sun, look at the ringed Earth, and magnify your view.  Where the image of the ring blocks the sun’s view of earth, there is a shadow on earth. Here is a cookbook approach to doing that.  
 Start Celestia
 press <enter>
@@ -81,5 +86,4 @@ Press comma, again and again (about a hundred times or so), to "magnify" the fie
 And there you have it.  Now you have a view of the earth where the position of the ring images is the same as the shadow they would cause - because you are positioned AT the sun itself, though your view of earth is magnified.  
 You can speed up the passage of time by pressing L a few times; you can slow it by pressing K a few times; to reverse time, press J; to reverse it back again, press J again.  To look at some particular date, click the Time menu, and Set Time.  Celestia documentation can be found on the Web and it will show how to do other things – for example, work out what view the satellites and spacecraft would have of the rings.  Thank you Chris Laurel and colleagues!
 
-THE SKY AS JONES SAW IT
 
