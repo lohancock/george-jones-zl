@@ -6,6 +6,7 @@ Install it from https://sourceforge.net/projects/celestia/
 You should replace its reasonably good ephemerides with the exactly right ones from JPL.  To do that:
 Go to ftp://ssd.jpl.nasa.gov/pub/eph/planets/SunOS/de406/ and download the file unxp1800.406
 Rename that file jpleph.dat and drop it into the celestia/data folder that was made when you installed Celestia in Steps 2-4.  (If you want to understand what the jpleph.dat file is doing, read http://en.wikibooks.org/wiki/Celestia/JPL_Ephemerides)
+Now you have correct ephemerides for dates 1800 to 2100 from JPL.
 
 Next, here follow instructions for adding two rings to Celestia's visualization.  
 One ring is in the plane of the equator like most planetary rings, and is thus an embodiment of the suggestion of O'Keefe (1980).
@@ -40,7 +41,9 @@ y
 that will land your point of view on the dead center of the Earth as you had depicted it, and you will be facing west because you had 270 at the top, and you will be traveling with earth because you pressed "y"
 press the down and up arrows to move the horizon.  
 
-remark 5:  While starting from scratch is a very clear and transparent way to situate yourself, there is a complicated alternative.  If you add the file entitled shipsites.ssc to the celestia/extras/tworings folder, then you will make the positions of all of Jones's observations available to yourself for selection.  In terms of Celestia, this file provides their latitudes and longitudes, categorizes them all as observatories, and gives them size 300.
+remark 5:  While starting from scratch is a very clear and transparent way to situate yourself, I am also providing a complicated alternative.  The file shipsites.ssc makes the positions of all of Jones's observations available to you for selection.  In terms of Celestia, this file provides their latitudes and longitudes, categorizes them all as observatories, and gives them size 300.  To associate positions or dates with the numbering system used to name these,consult the table in Jones's introduction that shows the numbering of his observations.
+If that was too easy, here is more:  Among these are the positions of Cassini's observations.  Note that these dates do not fall within the period 1800 to 2100 that is covered by the JPL ephemerides you are using.  To obtain those ephemerides, redo the step you took at installation.  Namely, Go to ftp://ssd.jpl.nasa.gov/pub/eph/planets/SunOS/de406/ BUT this time download the file unxp1500.406 and as before (see above), rename it and drop it into celestia/data/ and now you can use JPL ephemerides for Cassini's dates.  Warning, Celestia sometimes caches these files and gets mixed up when you change them.  
+(Actually I have provided both JPL files in this repository under the zip file.)
 
 remark 6:  imitating Jones's chart style
 On page xli, Jones sets out the conventions used on his charts.  Here are suggestions for making the Celestia view comparable.
